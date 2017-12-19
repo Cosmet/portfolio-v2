@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+.main {
+  position: relative;
+}
+
+.logo,
+.social-icons {
+  position: fixed;
+  top: 2.5vh;
+  color: white;
+  font-size: 3.5rem;
+  text-shadow:
+    -0.5px -0.5px 0 #000,
+     0.5px -0.5px 0 #000,
+     -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000;
+  z-index: 99;
+}
+
+.logo {
+  left: 10vw;
+  margin: 0;
+  font-family: $logo;
+}
+
+.social-icons {
+  right: 10vw;
+
+  a {
+    letter-spacing: 2rem;
+  }
+
+  a:hover {
+    color: $red;
+  }
+}

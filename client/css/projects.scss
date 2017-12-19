@@ -1,0 +1,148 @@
+@import './variables.scss';
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top, $yellow, $red);
+  padding: 0 10%;
+
+  h2 {
+    font-family: $logo;
+    font-size: 10rem;
+    color: white;
+    margin: 5rem 0 2rem 0;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30rem 30rem 25rem;
+  grid-template-areas:
+    "main main main"
+    "main main main"
+    "sub1 sub2 sub3";
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80vh 80vh 80vh 80vh 0vh 0vh;
+    grid-template-areas:
+      "main"
+      "sub1"
+      "sub2"
+      "sub3"
+      "sub4"
+      "sub5";
+  }
+}
+
+.project-container-wrapper {
+  margin: 0.5rem;
+  height: calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.project-cover {
+  position: relative;
+  height: 100%;
+}
+
+.project-cover:hover > .project-overlay {
+  height: 100%;
+}
+
+.project-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background: linear-gradient(to top, $purple, $yellow, $red);
+  opacity: 0.95;
+  border-radius: 5px 5px 0 0;
+  @include transition(height .5s);
+  overflow: hidden;
+}
+
+.project-description {
+  margin: auto 10%;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+
+  a {
+    background: white;
+    border-radius: 5px;
+    color: $blue;
+    padding: 0.5rem 1rem;
+  }
+
+  a:hover {
+    color: $yellow;
+  }
+}
+
+.project-main-desc {
+  font-size: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .project-description {
+    font-size: 3rem;
+  }
+
+  .project-dev-icons .dev-icon {
+    height: 5rem;
+  }
+}
+
+
+.project-dev-icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0 5% 0;
+
+  .dev-icon {
+    height: 2.5rem;
+  }
+}
+
+.project-main-icons > .dev-icon {
+  height: 5rem;
+}
+
+.project-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  height: 4rem;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid #ccc;
+  background: white;
+  font-size: 2.2rem;
+  font-family: $handwritten;
+  z-index: 10;
+}

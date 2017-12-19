@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento|Indie+Flower|Nunito');
+
+$logo: 'Sacramento', cursive;
+$handwritten: 'Indie Flower', cursive;
+$font: 'Nunito', Helvetica, sans-serif;
+
+// $black: #222;
+// $blue: #9AF9EC;
+// $red: #FE9DA6;
+// $yellow: #FFDC9E;
+// $purple: rgb(219, 154, 249);
+
+$black: #222;
+$blue: rgb(59, 59, 92);
+$red: rgb(255, 183, 68);
+$yellow: rgb(168, 67, 63);
+$purple: rgb(59, 59, 92);
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
