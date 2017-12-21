@@ -5,6 +5,9 @@ const Tech = db.define('tech', {
   name: {
     type: Sequelize.STRING,
   },
+  icon: {
+    type: Sequelize.STRING,
+  },
 })
 
 module.exports = Tech

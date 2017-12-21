@@ -10,6 +10,7 @@ const SingleProject = (props) => {
     cover,
     demo,
     live,
+    video,
     contributions,
     features,
     teamMembers,
@@ -25,19 +26,29 @@ const SingleProject = (props) => {
       </div>
 
       {
-        features && features.map((feature, i) => {
-          const leftOrRight = i % 2 === 1 ? 'left-side' : 'right-side';
+        video && (
+          <div className="single-project-video">
+          <iframe width="560" height="315" src={video} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        )
+      }
 
-          return (
-            <div className={`single-project-feature ${leftOrRight}`}>
-              <img src={`../${feature.image}`} />
-              <div className="feature-text">
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
+      {
+        features && features
+          .sort((a, b) => a.order - b.order)
+          .map((feature, i) => {
+            const leftOrRight = i % 2 === 1 ? 'left-side' : 'right-side';
+
+            return (
+              <div className={`single-project-feature ${leftOrRight}`}>
+                <img src={`../${feature.image}`} />
+                <div className="feature-text">
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
               </div>
-            </div>
-          )
-        })
+            )
+          })
       }
 
       <div className="single-project-stack-wrapper">
@@ -46,7 +57,7 @@ const SingleProject = (props) => {
           {
             stack && stack
               .sort((a, b) => a.name > b.name)
-              .map(tech => <img class="dev-icon" src={`../assets/icons/${tech.name}.svg`} />)
+              .map(tech => <p className="dev-icon-wrapper" bubbletooltip={tech.name} ><img className="dev-icon" src={`../assets/icons/${tech.icon}`} /></p>)
           }
         </div>
       </div>
@@ -92,6 +103,7 @@ const mapState = (state, ownProps) => {
     cover: selectedProject && selectedProject.cover,
     demo: selectedProject && selectedProject.demo,
     live: selectedProject && selectedProject.live,
+    video: selectedProject && selectedProject.video,
     contributions: selectedProject && selectedProject.contributions,
     features: selectedProject && selectedProject.features,
     teamMembers: selectedProject && selectedProject.teamMembers,

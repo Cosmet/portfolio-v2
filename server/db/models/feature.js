@@ -11,6 +11,9 @@ const Feature = db.define('feature', {
   description: {
     type: Sequelize.TEXT,
   },
+  order: {
+    type: Sequelize.INTEGER,
+  },
 })
 
 module.exports = Feature

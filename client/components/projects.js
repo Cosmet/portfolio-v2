@@ -38,7 +38,7 @@ const Projects = (props) => {
                       </div>
                       <div className={`project-dev-icons ${mainIcons}`}>
                         {
-                          project.stack.sort((a,b) => a.name > b.name).map(tech => <img class="dev-icon" src={`assets/icons/${tech.name}.svg`} />)
+                          project.stack.sort((a,b) => a.name > b.name).map(tech => <p className="dev-icon-wrapper" bubbletooltip={tech.name}><img className="dev-icon" src={`assets/icons/${tech.icon}`} /></p>)
                         }
                       </div>
                     </div>

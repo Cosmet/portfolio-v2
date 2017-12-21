@@ -122,14 +122,41 @@
 .project-dev-icons {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 1rem 0 5% 0;
 
   .dev-icon {
     height: 2.5rem;
   }
+
+  .dev-icon-wrapper {
+    position: relative;
+  }
+
+  .dev-icon-wrapper[bubbletooltip]:after {
+    position: absolute;
+    content: attr(bubbletooltip);
+    font-weight: bold;
+    bottom: -35px;
+    width: 3.7rem;
+    left: calc(0 - (width / 2));
+    right: 0;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    visibility: hidden;
+  }
+
+  .dev-icon-wrapper[bubbletooltip]:hover:before,
+  .dev-icon-wrapper[bubbletooltip]:hover:after {
+    visibility: visible;
+    -moz-transition: visibility 0s linear .3s;
+  }
 }
 
-.project-main-icons > .dev-icon {
+.project-main-icons .dev-icon {
   height: 5rem;
 }
 

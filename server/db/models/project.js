@@ -16,6 +16,9 @@ const Project = db.define('project', {
   },
   code: {
     type: Sequelize.STRING,
+  },
+  video: {
+    type: Sequelize.STRING,
   }
 })
 

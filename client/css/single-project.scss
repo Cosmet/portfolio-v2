@@ -51,6 +51,19 @@
   }
 }
 
+.single-project-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 3px solid white;
+
+
+  iframe {
+    border: 5px solid $red;
+  }
+}
+
 .single-project-feature {
   display: flex;
   justify-content: center;
@@ -62,6 +75,14 @@
     height: 30rem;
     border: 5px solid rgba(255,255,255,0.8);
     border-radius: 5px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+    &:hover {
+      -webkit-transform: scale(2);
+      -moz-transform: scale(2);
+          transform: scale(2);
+    }
   }
 
   .feature-text {
@@ -131,6 +152,31 @@
 
   .dev-icon {
     height: 8rem;
+  }
+
+  .dev-icon-wrapper {
+    position: relative;
+  }
+
+  .dev-icon-wrapper[bubbletooltip]:after {
+    position: absolute;
+    content: attr(bubbletooltip);
+    font-weight: bold;
+    bottom: -35px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    visibility: hidden;
+  }
+
+  .dev-icon-wrapper[bubbletooltip]:hover:before,
+  .dev-icon-wrapper[bubbletooltip]:hover:after {
+    visibility: visible;
+    -moz-transition: visibility 0s linear .3s;
   }
 }
 
