@@ -17,21 +17,21 @@ const Main = (props) => {
     <div className="main">
       <h1 className="logo"><Link to="/">dm</Link></h1>
       <div className="social-icons">
-          <a href="https://github.com/Cosmet">
-            <i className="fa fa-github" aria-hidden="true"></i>
-          </a>
+        <a href="https://github.com/Cosmet">
+          <i className="fa fa-github" aria-hidden="true"></i>
+        </a>
 
-          <a href="https://medium.com/@damian.michniak29">
-            <i className="fa fa-medium" aria-hidden="true"></i>
-          </a>
+        <a href="https://medium.com/@damian.michniak29">
+          <i className="fa fa-medium" aria-hidden="true"></i>
+        </a>
 
-          <a href="https://www.linkedin.com/in/damian-michniak">
-            <i className="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
+        <a href="https://www.linkedin.com/in/damian-michniak">
+          <i className="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
 
-          <a href="/#contact">
-          <i class="fa fa-envelope-o" aria-hidden="true"></i>
-          </a>
+        <a href="/#contact">
+          <i className="fa fa-envelope-o" aria-hidden="true"></i>
+        </a>
       </div>
       {children}
     </div>

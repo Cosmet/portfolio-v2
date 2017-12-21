@@ -28,7 +28,7 @@ const Projects = (props) => {
             }
 
             return (
-              <div className="project-container-wrapper" style={{ gridArea: section }}>
+              <div key={project.id} className="project-container-wrapper" style={{ gridArea: section }}>
                 <div className="project-container" style={background}>
                   <div className="project-cover">
                     <div className="project-overlay">
@@ -38,7 +38,7 @@ const Projects = (props) => {
                       </div>
                       <div className={`project-dev-icons ${mainIcons}`}>
                         {
-                          project.stack.sort((a,b) => a.name > b.name).map(tech => <p className="dev-icon-wrapper" bubbletooltip={tech.name}><img className="dev-icon" src={`assets/icons/${tech.icon}`} /></p>)
+                          project.stack.sort((a,b) => a.name > b.name).map(tech => <p key={`${project.id}-tech-${tech.id}`} className="dev-icon-wrapper" bubbletooltip={tech.name}><img className="dev-icon" src={`assets/icons/${tech.icon}`} /></p>)
                         }
                       </div>
                     </div>

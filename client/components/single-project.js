@@ -28,7 +28,7 @@ const SingleProject = (props) => {
       {
         video && (
           <div className="single-project-video">
-          <iframe width="560" height="315" src={video} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <iframe width="100%" height="500px" src={video} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
           </div>
         )
       }
@@ -40,7 +40,7 @@ const SingleProject = (props) => {
             const leftOrRight = i % 2 === 1 ? 'left-side' : 'right-side';
 
             return (
-              <div className={`single-project-feature ${leftOrRight}`}>
+              <div key={`feature-${feature.id}`} className={`single-project-feature ${leftOrRight}`}>
                 <img src={`../${feature.image}`} />
                 <div className="feature-text">
                   <h3>{feature.title}</h3>
@@ -57,7 +57,7 @@ const SingleProject = (props) => {
           {
             stack && stack
               .sort((a, b) => a.name > b.name)
-              .map(tech => <p className="dev-icon-wrapper" bubbletooltip={tech.name} ><img className="dev-icon" src={`../assets/icons/${tech.icon}`} /></p>)
+              .map(tech => <p key={`tech-${tech.id}`} className="dev-icon-wrapper" bubbletooltip={tech.name} ><img className="dev-icon" src={`../assets/icons/${tech.icon}`} /></p>)
           }
         </div>
       </div>
@@ -67,7 +67,7 @@ const SingleProject = (props) => {
         <h3>{teamMembers && teamMembers.length > 1 ? 'Full Stack Developer' : 'Solo Developer'}</h3>
         <ul>
           {
-            contributions && contributions.map(res => <li>{res.description}</li>)
+            contributions && contributions.map(res => <li key={`contr-${res.id}`}>{res.description}</li>)
           }
         </ul>
       </div>
@@ -77,7 +77,7 @@ const SingleProject = (props) => {
         {
           teamMembers && teamMembers.map(member => {
             return (
-              <div className="single-project-member">
+              <div key={`member-${member.id}`} className="single-project-member">
                 <p>{member.name}</p>
               </div>
             )
