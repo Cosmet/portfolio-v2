@@ -4,12 +4,13 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 const SingleProject = (props) => {
+  window.scrollTo(0, 0)
   const {
     name,
     description,
     cover,
     demo,
-    live,
+    code,
     video,
     contributions,
     features,
@@ -25,13 +26,17 @@ const SingleProject = (props) => {
         <p>{description}</p>
       </div>
 
+      <div className="single-project-sub-description">
       {
         video && (
-          <div className="single-project-video">
           <iframe width="100%" height="500px" src={video} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
-          </div>
         )
       }
+        <div className="single-project-links">
+          <a href={demo}>Live Demo</a>
+          <a href={code}>The Code</a>
+        </div>
+      </div>
 
       {
         features && features
@@ -102,7 +107,7 @@ const mapState = (state, ownProps) => {
     description: selectedProject && selectedProject.description,
     cover: selectedProject && selectedProject.cover,
     demo: selectedProject && selectedProject.demo,
-    live: selectedProject && selectedProject.live,
+    code: selectedProject && selectedProject.code,
     video: selectedProject && selectedProject.video,
     contributions: selectedProject && selectedProject.contributions,
     features: selectedProject && selectedProject.features,

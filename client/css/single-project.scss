@@ -51,16 +51,37 @@
   }
 }
 
-.single-project-video {
+.single-project-sub-description {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 2rem 0;
   border-bottom: 3px solid white;
 
 
   iframe {
     border: 5px solid $red;
+  }
+}
+
+.single-project-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+  color: white;
+  font-size: 5rem;
+
+  a {
+    text-align: center;
+    flex-basis: 48%;
+    border: 3px solid white;
+
+    &:hover {
+      background: $red;
+      color: $purple;
+    }
   }
 }
 
