@@ -38,7 +38,7 @@
 }
 
 .single-project-description {
-  border-bottom: 3px solid white;
+  border-bottom: 1px solid white;
 }
 
 @media (max-width: 560px) {
@@ -56,11 +56,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem 0;
-  border-bottom: 3px solid white;
-
 
   iframe {
+    margin: 2rem;
+    max-width: calc(100% - 10px);
     border: 5px solid $red;
   }
 }
@@ -69,14 +68,14 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
   color: white;
   font-size: 5rem;
+  border-bottom: 3px solid white;
+  border-top: 1px solid white;
 
   a {
     text-align: center;
     flex-basis: 48%;
-    border: 3px solid white;
 
     &:hover {
       background: $red;

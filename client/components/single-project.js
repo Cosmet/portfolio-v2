@@ -29,7 +29,7 @@ const SingleProject = (props) => {
       <div className="single-project-sub-description">
       {
         video && (
-          <iframe width="100%" height="500px" src={video} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
+          <iframe width="75%" height="475px" src={video} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
         )
       }
         <div className="single-project-links">
@@ -38,6 +38,7 @@ const SingleProject = (props) => {
         </div>
       </div>
 
+      <h2>Features</h2>
       {
         features && features
           .sort((a, b) => a.order - b.order)
