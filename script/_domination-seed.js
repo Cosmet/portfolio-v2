@@ -5,9 +5,9 @@ const domination = {
     name: 'Domination',
     description: 'Turn-based strategy game inspired by the classic board game Risk. Featuring real-time multiplayer and artificial intelligence.',
     cover: 'assets/projects/domination/cover.png',
-    demo: '',
-    code: '',
-    video: 'https://www.youtube.com/embed/watch?v=51-RLBMWXgQ',
+    demo: 'https://domination-squad.herokuapp.com/',
+    code: 'https://github.com/the-capstones/domination',
+    video: 'https://www.youtube.com/embed/51-RLBMWXgQ',
   },
   stack: [
     'Javascript',

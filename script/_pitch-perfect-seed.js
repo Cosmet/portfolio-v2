@@ -5,8 +5,8 @@ const pitchPerfect = {
     name: 'Pitch Perfect',
     description: 'Real-time peer to peer video communication chat room to practice your elevator pitch.',
     cover: 'assets/projects/pitch-perfect-cover.png',
-    demo: '',
-    code: '',
+    demo: 'https://pitch-perfect-practice.herokuapp.com/',
+    code: 'https://github.com/Cosmet/pitch-perfect',
   },
   stack: [
     'Javascript',

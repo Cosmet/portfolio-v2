@@ -6,7 +6,7 @@ const campusCompanion = {
     description: 'Student management system for school administrators allowing management of one or multiple campuses and their respective students.',
     cover: 'assets/projects/campus-companion-cover.png',
     demo: '',
-    code: '',
+    code: 'https://github.com/Cosmet/senior-enrichment',
   },
   stack: [
     'Javascript',

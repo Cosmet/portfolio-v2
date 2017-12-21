@@ -5,8 +5,8 @@ const gamepackig = {
     name: 'Gamepackig',
     description: 'Mock e-commerce website that sells gaming systems, computers, and accessories.',
     cover: 'assets/projects/gamepackig-cover.png',
-    demo: '',
-    code: '',
+    demo: 'https://gamepackig.herokuapp.com/',
+    code: 'https://github.com/ThethreeMuscoders/gamepackig',
   },
   stack: [
     'Javascript',
