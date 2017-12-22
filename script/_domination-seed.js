@@ -62,7 +62,7 @@ const domination = {
     },
     {
       title: 'Artificial Intelligence',
-      description: 'We built an AI using a probability matrix and a genetic algorithm. We pitted several different personality traits against each other over 500,000,000 simulations and 2,000 generations to see which AI was the most powerful to battle you in game.',
+      description: 'We built an AI using a probability matrix and a genetic algorithm. We pitted several different personality traits against each other over 500,000 simulations and 2,000 generations to see which AI was the most powerful to battle you in game.',
       image: 'assets/projects/domination/robot.svg',
       order: 1,
     },
